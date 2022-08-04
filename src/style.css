@@ -4,16 +4,110 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+/* background */
+body {
+
+    width: 100vw;
+    height: 100vh;
+    animation-name: animate;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    background-image:
+      radial-gradient(
+        circle 600px at 20% 40%,
+        rgba(255, 255, 255, 0.6) 40%, 
+        rgba(145, 190, 212, 0.4)
+      ),
+      radial-gradient(
+        circle 600px at 60% 60%,
+        rgba(255, 255, 255, 0.7) 50%, 
+        rgba(145, 190, 212, 0.3)
+      ),
+      linear-gradient(
+        20deg, 
+        rgb(170, 219, 240),
+        rgba(48, 66, 105)),
+      linear-gradient(
+        -18deg, 
+        rgba(48, 66, 105), 
+        rgb(170, 219, 240) 25% ,
+        rgba(48, 66, 105) 85%);
+    background-blend-mode: 
+      color-burn,
+      color-burn, 
+      overlay;
+  }
+  
+  @keyframes animate {
+    0% {
+      background-size:
+        100%,
+        100%,
+        100%,
+        100%;
+      background-position:
+        center,
+        top,
+        center,
+        center;
+    }
+    100% {
+      background-size:
+        500%,
+        400%,
+        200%,
+        300%;
+      background-position:
+        right,
+        left,
+        center,
+        top;
+    }
+  }
+/* end back ground */
+/* search container */
+.search-container{
+    margin: auto;
+    width: 60%;
+    height: 100px;
+    text-align: center;
+    margin-top: 50px;
+}
+.search-container h1{
+    margin-bottom: 20px;
+    color: white;
+}
+.search-container input{
+    width: 50%;
+    height: 30%;
+    background-color: rgb(222, 219, 219);
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    bottom: solid 1px black;
+    padding-left: 10npx;
+}
+.search-container button{
+    width: 50px;
+    height: 30px;
+    border-radius: 20%;
+    background-color: rgb(170, 219, 240) ;
+    border: solid 1px black;
+}
+/* end search container  */
 
 /* card */
 .card{
-    background-color: beige;
+    background-color: none;
+    border: solid 0.5px black;
     position: absolute;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 30%;
-    height: 60%;
+    top: 60%;
+    transform: translate(-60%, -50%);
+    width: 25%;
+    height: 50%;
     border-radius: 10px;;
     display: flex;
     flex-flow: column nowrap;
@@ -21,7 +115,6 @@
 
 /* city info */
 .city-state{
-    background-color: orange;
     padding-left: 20px;
     padding-right: 20px;
     margin-bottom: 10px;
@@ -32,7 +125,6 @@
 
 .city-state #location{
     display: inline;
-    background-color: red;
 }
 
 .city-state #weather-pic{
@@ -43,9 +135,8 @@
 
 /* current condition */
 .current-condition{
-    background-color: palegreen;
     padding-left: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
     padding-right: 20px;
 }
 /* current temp */
@@ -63,8 +154,8 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: solid 1px white;
-    background-color: blue;
+    border: solid 1px black;
+    background-color: rgb(170, 219, 240);
     
 }
 
@@ -72,7 +163,6 @@
 
 /* end current condition */
 .other-info{
-    background-color: aqua;
     display: grid;
     grid-template:repeat(2, 1fr)/ repeat(2, 1fr) ;
     padding-left: 3rem;

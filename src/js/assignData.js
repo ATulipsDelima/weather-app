@@ -1,17 +1,19 @@
-import { toFahrenheit } from "./degreeConverter.js";
+import { toFahrenheit, toMilePerHour } from "./metricConverter.js";
 const assignData = (data)=>{
     const location = document.getElementById("location");
     const humidity = document.getElementById("humidity");
-    const wind = document.getElementById("wind");
+    const ccondition = document.getElementById("weather-description")
 
     location.textContent = data.city + "," + data.state;
     humidity.textContent = "Humidity: " + data.humidity  + "%";
-    wind.textContent = "wind: " + data.windSpeed + " mph"
+    ccondition.textContent = data.weatherType;
 
     // assing degree data (fahrenhiet by default)
     toFahrenheit(data.currentTemp, data.lowestTemp, data.highestTemp);
-
+     // get icon for current weather
     dayOrNight(data.icon)
+    // assing wind speed (to mph)
+    toMilePerHour(data.windSpeed);
 
 }
 
@@ -19,7 +21,6 @@ const dayOrNight = (icon) =>{
 
     // get image icon element
     const image = document.getElementById("weather-pic"); 
-    console.log(image)
     // get letter from icon data (d or n)
     console.log(icon[2]);
 

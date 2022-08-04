@@ -5,7 +5,6 @@ async function getData(city){
    try{
     const response = await fetch (`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=6ab5e65a7ba8c4d09e98693083f39c45`, {mode: 'cors'})
     const data = await response.json()
-    console.log(data)
     // convert data into useable data
     let info = transformData(data);
 
@@ -32,8 +31,6 @@ function transformData(data){
         
         
     };
-
-
     return information;
 }
 

@@ -12,9 +12,9 @@ const toFahrenheit = (current, low, high)=>{
 
     //assidn data to elements
 
-    currentTemp.textContent = currentF + " \u00B0";
-    lowTemp.textContent = "Low: " + lowF;
-    highTemp.textContent = "High: " + highF;
+    currentTemp.textContent = currentF + "\u00B0";
+    lowTemp.textContent = "Low: " + lowF + "\u00B0";
+    highTemp.textContent = "High: " + highF + "\u00B0";
 }
 
 const toCelsius = (current, low, high)=>{
@@ -31,9 +31,18 @@ const toCelsius = (current, low, high)=>{
 
     //assidn data to elements
 
-    currentTemp.textContent = currentF + " \u00B0";
-    lowTemp.textContent = "Low: " + lowF;
-    highTemp.textContent = "High: " + highF;
+    currentTemp.textContent = currentF + "\u00B0";
+    lowTemp.textContent = "Low: " + lowF + "\u00B0";
+    highTemp.textContent = "High: " + highF + "\u00B0";
 }
 
-export {toFahrenheit, toCelsius}
+// converts meters/sec to miles/hour
+const toMilePerHour = (windSpeed)=>{
+    const wind = document.getElementById("wind");
+    
+    const convertedWindSpeed = Math.round(windSpeed * 2.236936);
+
+    wind.textContent = "wind: " + convertedWindSpeed + " mph"
+}
+
+export {toFahrenheit, toCelsius, toMilePerHour}
