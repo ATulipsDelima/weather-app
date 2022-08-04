@@ -2,4 +2,85 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
+
+/* card */
+.card{
+    background-color: beige;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: 60%;
+    border-radius: 10px;;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+/* city info */
+.city-state{
+    background-color: orange;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.city-state #location{
+    display: inline;
+    background-color: red;
+}
+
+.city-state #weather-pic{
+    
+}
+
+/* end city info */
+
+/* current condition */
+.current-condition{
+    background-color: palegreen;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    padding-right: 20px;
+}
+/* current temp */
+.temp{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.temp #current-temp{
+    margin-right: 20px;
+    font-size: 400%;
+}
+.temp #current-deg{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: solid 1px white;
+    background-color: blue;
+    
+}
+
+/* end current temp */
+
+/* end current condition */
+.other-info{
+    background-color: aqua;
+    display: grid;
+    grid-template:repeat(2, 1fr)/ repeat(2, 1fr) ;
+    padding-left: 3rem;
+    row-gap: 5px;
+    
+}
+.other-info P{
+    font-size: 120%;
+}
+
+/* end card */

@@ -12,7 +12,7 @@ const toFahrenheit = (current, low, high)=>{
 
     //assidn data to elements
 
-    currentTemp.textContent = currentF;
+    currentTemp.textContent = currentF + " \u00B0";
     lowTemp.textContent = "Low: " + lowF;
     highTemp.textContent = "High: " + highF;
 }
@@ -31,7 +31,7 @@ const toCelsius = (current, low, high)=>{
 
     //assidn data to elements
 
-    currentTemp.textContent = currentF;
+    currentTemp.textContent = currentF + " \u00B0";
     lowTemp.textContent = "Low: " + lowF;
     highTemp.textContent = "High: " + highF;
 }
