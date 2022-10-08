@@ -13,7 +13,7 @@ const assignData = (data)=>{
      // get icon for current weather
     dayOrNight(data.icon)
     // assing wind speed (to mph)
-    toMilePerHour(data.windSpeed);
+    toMilePerHour(data.windSpeed); 
 
 }
 
@@ -22,7 +22,6 @@ const dayOrNight = (icon) =>{
     // get image icon element
     const image = document.getElementById("weather-pic"); 
     // get letter from icon data (d or n)
-    console.log(icon[2]);
 
     switch(icon){
         case "01d":
@@ -54,30 +53,25 @@ const dayOrNight = (icon) =>{
 
         case "04d":
         case "04n":
-            console.log(true)
             image.src = "./weather_icons/broken_clouds_day_night.png"
             break;
         case "09d":
         case "09n":
-            console.log(true)
             image.src = "./weather_icons/shower_rain_day_night.png"
             break;
 
         case "13d":
         case "13n":
-            console.log(true)
             image.src = "./weather_icons/snow_day_night.png"
             break;
 
         case "11d":
         case "11n":
-            console.log(true)
             image.src = "./weather_icons/thunderstorm_day_night.png"
             break;
 
         case "50d":
         case "50n":
-            console.log(true)
             image.src = "./weather_icons/mist_day_night.png"
             break;
         default:

@@ -11,11 +11,13 @@ const degreeBtn = document.getElementById("current-deg")
 
 const searchBar = document.getElementById("search-bar");
 //keep track of current data (Atlanta by default)
-let currentCityData =  getData('atlanta').then(res => assignData(res));
+let currentCityData;
+
+getData('atlanta').then( res => assignData(res));
 
 console.log(currentCityData)
 
-console.log(process.env.API_KEY)
+// console.log(process.env.API_KEY)
 
 
 
