@@ -17,7 +17,6 @@ getData('atlanta').then( res => assignData(res));
 
 console.log(currentCityData)
 
-// console.log(process.env.API_KEY)
 
 
 
@@ -92,7 +91,6 @@ degreeBtn.addEventListener('click', (e)=>{
 
 
 // assign data to DOM elements
-
 
 async function defaultCity(city){
 
